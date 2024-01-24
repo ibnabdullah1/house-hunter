@@ -53,7 +53,7 @@ const UpdateForm = () => {
     };
     const houseUpdate = async (id, updateData) => {
       const { data } = await axios.put(
-        `http://localhost:4000/house/${id}`,
+        `https://server-indol-sigma.vercel.app/house/${id}`,
         updateData
       );
       return data;

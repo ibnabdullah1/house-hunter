@@ -42,7 +42,7 @@ const router = createBrowserRouter([
         path: "booking/:id",
         element: <BookingForm />,
         loader: ({ params }) =>
-          fetch(`http://localhost:4000/booking/${params.id}`),
+          fetch(`https://server-indol-sigma.vercel.app/booking/${params.id}`),
       },
     ],
   },
@@ -76,7 +76,7 @@ const router = createBrowserRouter([
         path: "manage-houses/update/:id",
         element: <UpdateForm />,
         loader: ({ params }) =>
-          fetch(`http://localhost:4000/houses/${params.id}`),
+          fetch(`https://server-indol-sigma.vercel.app/houses/${params.id}`),
       },
     ],
   },

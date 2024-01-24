@@ -36,7 +36,7 @@ const AllRooms = () => {
   });
   useEffect(() => {
     axios
-      .get("http://localhost:4000/houses")
+      .get("https://server-indol-sigma.vercel.app/houses")
       .then((res) => setHouses(res.data));
   }, []);
 

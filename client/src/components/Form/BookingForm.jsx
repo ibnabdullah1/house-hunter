@@ -48,7 +48,7 @@ const BookingForm = () => {
     };
     try {
       const res = await axios.post(
-        "http://localhost:4000/booking-house",
+        "https://server-indol-sigma.vercel.app/booking-house",
         bookingData
       );
 

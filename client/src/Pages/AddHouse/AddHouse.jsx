@@ -37,7 +37,10 @@ const AddHouse = () => {
       number,
     };
     try {
-      const res = await axios.post("http://localhost:4000/houses", houseData);
+      const res = await axios.post(
+        "https://server-indol-sigma.vercel.app/houses",
+        houseData
+      );
 
       if (res.data.acknowledged) {
         setLoading(false);

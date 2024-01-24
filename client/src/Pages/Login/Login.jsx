@@ -15,7 +15,10 @@ const Login = () => {
     const password = form.password.value;
     const user = { email: email, password: password };
     try {
-      const res = await axios.post("http://localhost:4000/login", user);
+      const res = await axios.post(
+        "https://server-indol-sigma.vercel.app/login",
+        user
+      );
       console.log(res.data.success);
       if (res.data.success) {
         navigate("/dashboard");

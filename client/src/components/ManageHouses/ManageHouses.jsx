@@ -8,7 +8,9 @@ const ManageHouses = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const getAllHouses = async () => {
-    const { data } = await axios("http://localhost:4000/houses");
+    const { data } = await axios(
+      "https://server-indol-sigma.vercel.app/houses"
+    );
     return data;
   };
   const { data: houses = [], refetch } = useQuery({
@@ -26,12 +28,14 @@ const ManageHouses = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:4000/houses/${_id}`).then((res) => {
-          if (res.data.deletedCount > 0) {
-            refetch();
-            Swal.fire("Deleted!", "Your House has been deleted.", "success");
-          }
-        });
+        axios
+          .delete(`https://server-indol-sigma.vercel.app/houses/${_id}`)
+          .then((res) => {
+            if (res.data.deletedCount > 0) {
+              refetch();
+              Swal.fire("Deleted!", "Your House has been deleted.", "success");
+            }
+          });
       }
     });
   };

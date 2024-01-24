@@ -6,20 +6,13 @@ const Footer = () => {
           <div className="-mx-4 flex flex-wrap justify-between">
             <div className="px-4 my-4 w-full lg:w-2/5">
               <div className="flex items-center mb-4 justify-start">
-                <img
-                  className="h-7"
-                  src="https://i.ibb.co/CmsPLg6/realestate.png"
-                  alt=""
-                />
-                <h2 className="font-bold text-2xl text-white ">Real Estate</h2>
+                <h2 className="font-bold text-2xl text-white ">House Hunter</h2>
               </div>
               <p className="text-justify">
-                Explore our comprehensive real estate platform offering seamless
-                property listings, advanced search features, virtual property
-                tours, user and agent profiles, real-time notifications,
-                financial calculators, secure messaging, property analytics, and
-                streamlined transaction management. Elevate your real estate
-                experience with us.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
+                ipsum dolores quia explicabo iure harum fugit vitae. Fugiat,
+                labore. Adipisci quos necessitatibus vero dolorem incidunt
+                blanditiis obcaecati iste tempora ullam?
               </p>
             </div>
 
@@ -165,10 +158,10 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="-mx-4 flex flex-wrap justify-between">
             <div className="px-4 w-full text-center sm:w-auto sm:text-left">
-              Copyright © 2020 Real estate platform. All Rights Reserved.
+              Copyright © 2020 House Hunter. All Rights Reserved.
             </div>
             <div className="px-4 w-full text-center sm:w-auto sm:text-left">
-              Made with by REAL ESTATE PLATFORM.
+              Made with by HOUSE HUNTER.
             </div>
           </div>
         </div>

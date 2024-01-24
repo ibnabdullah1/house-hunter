@@ -34,14 +34,20 @@ const SignUp = () => {
     }
     const userData = { email: email, password: password };
     try {
-      const res = await axios.put("http://localhost:4000/users", user);
-      const user = await axios.post("http://localhost:4000/login", userData);
+      const res = await axios.put(
+        "https://server-indol-sigma.vercel.app/users",
+        user
+      );
+      const user = await axios.post(
+        "https://server-indol-sigma.vercel.app/login",
+        userData
+      );
       if (res.data.acknowledged) {
         setLoading(false);
       }
       if (res.data.success) {
         const resPons = await axios.post(
-          "http://localhost:4000/login",
+          "https://server-indol-sigma.vercel.app/login",
           userData
         );
         localStorage.setItem("token", resPons.data.token);

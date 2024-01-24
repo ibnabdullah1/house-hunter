@@ -10,7 +10,7 @@ const ManageBooking = () => {
   console.log(userInfo);
   const getAllBookings = async () => {
     const { data } = await axios(
-      `http://localhost:4000/booking-house/${userInfo.email}`
+      `https://server-indol-sigma.vercel.app/booking-house/${userInfo.email}`
     );
     return data;
   };
@@ -30,7 +30,7 @@ const ManageBooking = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:4000/booking-house/${_id}`)
+          .delete(`https://server-indol-sigma.vercel.app/booking-house/${_id}`)
           .then((res) => {
             if (res.data.deletedCount > 0) {
               refetch();
